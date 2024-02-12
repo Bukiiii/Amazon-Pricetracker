@@ -35,7 +35,7 @@ def track_prices():
         print(price)
     
 def send_mail(url_variable):                                                            #Still in process  sending mail doesnt work atm
-    recipents = ['kirenburak@gmail.com', 'madshrimpy@gmail.com']
+    recipents = ['']                                                                    #Needs to be filled with email recipents who you want to send the mail to
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
@@ -47,7 +47,7 @@ def send_mail(url_variable):                                                    
     msg = f"Subject: {subject}\n\n{body}"
     
     server.sendmail(
-        'kirenburak@gmail.com',
+        '',                                                                     #Needs to be filled with the email who sends it
         recipents,
         msg
     )
